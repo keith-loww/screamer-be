@@ -2,8 +2,8 @@ PUT http://localhost:3001/api/posts/62bccd4116239814bd159fcf
 Content-Type: application/json
 
 {
-    "author": "COULD YOU LOOK AT HIM THE SAME WAY?",
-    "content": "SCREAMO",
+    "author": "SCREAMO",
+    "content": "COULD YOU LOOK AT HIM THE SAME WAY?",
     "date": "2022-06-29T22:08:01.628+00:00",
     "likes": 1
 }
