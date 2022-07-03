@@ -24,7 +24,7 @@ postsRouter.put("/:id", async (request, response) => {
         content,
         date,
         comments,
-        likes
+        likes,
     }
     const updated = await Post.findByIdAndUpdate(request.params.id, postObj, { new: true })
     response.status(200).json(updated)
