@@ -17,4 +17,17 @@ postsRouter.post("/", async (request, response) => {
     response.status(201).json(savedPost)
 })
 
+postsRouter.put("/:id", async (request, response) => {
+    const {author, content, date, comments, likes} = request.body
+    const postObj = {
+        author,
+        content,
+        date,
+        comments,
+        likes
+    }
+    const updated = await Post.findByIdAndUpdate(request.params.id, postObj, { new: true })
+    response.status(200).json(updated)
+})
+
 module.exports = postsRouter

@@ -15,6 +15,14 @@ const postSchema = new mongoose.Schema({
         type: Date,
         required: true,
     },
+    comments: [
+        {
+            type: String
+        }
+    ],
+    likes: {
+        type: Number
+    }
 })
 
 postSchema.set("toJSON", {
