@@ -11,7 +11,9 @@ postsRouter.post("/", async (request, response) => {
     const newPost = new Post({
         author,
         content,
-        date: new Date()
+        date: new Date(),
+        likes: 0,
+        comments: []
     })
     const savedPost = await newPost.save()
     response.status(201).json(savedPost)
